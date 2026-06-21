@@ -21,8 +21,8 @@ function formatTime(timestamp: bigint): string {
 }
 
 function truncateHash(hash: string, chars = 12): string {
-  if (hash.length <= chars * 2 + 3) return hash;
-  return `${hash.slice(0, chars)}…${hash.slice(-chars)}`;
+   return hash;
+  
 }
 
 interface MessageCardProps {
