@@ -1,0 +1,21 @@
+{
+  "overview": "A minimalistic public message board with a built-in Nomad Network page browser. Post and read messages, or browse Nomad Network pages by node hash and path — all in one place.",
+  "features": [
+    "Public message board with persistent posts",
+    "Post messages with name and content",
+    "Browse Nomad Network pages by node hash and path",
+    "Real-time page content polling every 3 seconds",
+    "Tab switcher between Messages and Browse Nomad",
+    "Preformatted page content display with scrolling",
+    "Backend HTTP API for messages and Nomad browsing"
+  ],
+  "category": "productivity",
+  "tags": [
+    "message-board",
+    "nomad-network",
+    "public",
+    "polling",
+    "http-api"
+  ],
+  "last_updated": "2026-04-17T08:14:58.227Z"
+}

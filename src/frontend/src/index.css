@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-display: "General Sans", sans-serif;
+    --font-body: "General Sans", sans-serif;
+    --font-mono: "Geist Mono", monospace;
+    --radius: 0.25rem;
+
+    --background: 98% 0 0;
+    --foreground: 18% 0 0;
+    --card: 100% 0 0;
+    --card-foreground: 18% 0 0;
+    --popover: 100% 0 0;
+    --popover-foreground: 18% 0 0;
+
+    --primary: 50% 0.12 250;
+    --primary-foreground: 98% 0 0;
+
+    --secondary: 92% 0 0;
+    --secondary-foreground: 25% 0 0;
+    --muted: 92% 0 0;
+    --muted-foreground: 48% 0 0;
+
+    --accent: 65% 0.18 30;
+    --accent-foreground: 98% 0 0;
+
+    --destructive: 55% 0.22 25;
+    --destructive-foreground: 98% 0 0;
+
+    --border: 88% 0 0;
+    --input: 95% 0 0;
+    --ring: 50% 0.12 250;
+
+    --chart-1: 65% 0.22 40;
+    --chart-2: 60% 0.12 185;
+    --chart-3: 40% 0.07 227;
+    --chart-4: 83% 0.19 84;
+    --chart-5: 77% 0.19 70;
+
+    --sidebar: 98% 0 0;
+    --sidebar-foreground: 18% 0 0;
+    --sidebar-primary: 50% 0.12 250;
+    --sidebar-primary-foreground: 98% 0 0;
+    --sidebar-accent: 92% 0 0;
+    --sidebar-accent-foreground: 25% 0 0;
+    --sidebar-border: 88% 0 0;
+    --sidebar-ring: 50% 0.12 250;
+  }
+
+  .dark {
+    --background: 14% 0 0;
+    --foreground: 93% 0 0;
+    --card: 20% 0 0;
+    --card-foreground: 93% 0 0;
+    --popover: 25% 0 0;
+    --popover-foreground: 93% 0 0;
+
+    --primary: 75% 0.15 250;
+    --primary-foreground: 14% 0 0;
+
+    --secondary: 25% 0 0;
+    --secondary-foreground: 85% 0 0;
+    --muted: 25% 0 0;
+    --muted-foreground: 55% 0 0;
+
+    --accent: 72% 0.2 40;
+    --accent-foreground: 14% 0 0;
+
+    --destructive: 65% 0.19 22;
+    --destructive-foreground: 14% 0 0;
+
+    --border: 30% 0 0;
+    --input: 30% 0 0;
+    --ring: 75% 0.15 250;
+
+    --chart-1: 49% 0.24 264;
+    --chart-2: 70% 0.17 162;
+    --chart-3: 77% 0.19 70;
+    --chart-4: 63% 0.27 304;
+    --chart-5: 65% 0.25 16;
+
+    --sidebar: 20% 0 0;
+    --sidebar-foreground: 93% 0 0;
+    --sidebar-primary: 75% 0.15 250;
+    --sidebar-primary-foreground: 14% 0 0;
+    --sidebar-accent: 25% 0 0;
+    --sidebar-accent-foreground: 85% 0 0;
+    --sidebar-border: 30% 0 0;
+    --sidebar-ring: 75% 0.15 250;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/assets/fonts/GeneralSans.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url("/assets/fonts/GeistMono.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card-elevation {
+    @apply bg-card border border-border shadow-sm;
+  }
+
+  .divider-subtle {
+    @apply border-b border-border;
+  }
+}

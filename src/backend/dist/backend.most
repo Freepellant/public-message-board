@@ -1,0 +1,50 @@
+// Version: 1.0.0
+type Message__714344397 =
+  {content : Text; id : Nat; sender : Text; timestamp : Int};
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type Reply__724200318 =
+  {
+    acked : Bool;
+    content : Text;
+    error : Text;
+    message_id : Nat;
+    reply_id : Nat;
+    reply_to : Text;
+    status : Text;
+    status_timestamp : Text
+  };
+actor {
+  stable var browseRequestId : Nat;
+  stable intervalNs : Int;
+  stable var lastBrowseNodeHash : Text;
+  stable var lastBrowsePagePath : Text;
+  stable var lastBrowsePending : Bool;
+  stable var lastPageContent : Text;
+  stable var lastPageReady : Bool;
+  stable maxAgeNs : Int;
+  stable maxContentSize : Nat;
+  stable messages :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?Message__714344397]];
+      var elementIndex : Nat__490723111
+    };
+  stable var nextMessageId : Nat;
+  stable var nextReplyId : Nat;
+  stable replies :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?Reply__724200318]];
+      var elementIndex : Nat__490723111
+    };
+  stable var replyContent : Text;
+  stable var replyId : Nat;
+  stable var replyMessageId : Nat;
+  stable var replyPending : Bool;
+  stable var replyStatus : Text;
+  stable var replyStatusError : Text;
+  stable var replyStatusId : Nat;
+  stable var replyStatusTimestamp : Text;
+  stable var replyTo : Text
+};
